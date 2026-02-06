@@ -13,7 +13,44 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-position: fixed;
   font-family: var(--font);
-  font-variation-settings: 'wght' var(--weightText);
+  font-variation-settings: "wght" var(--weightText);
+  background-image: var(--gradient);
+}
+
+.block {
+  inline-size: clamp(23.438rem, 0rem + 100vi, 43.75rem);
+  background-color: #fff;
+  border: 2px solid #000000;
+}
+
+.header {
+  margin-block: 100px;
+  padding-block: clamp(7.625rem, 7.048rem + 2.462vi, 8.125rem);
+  font-family: var(--fontAccent);
+  font-weight: 400;
+  font-style: regular;
+  text-transform: uppercase;
+  color: var(--textColor);
+}
+
+.logo {
+  justify-self: center;
+  font-size: clamp(3.0625rem, 2.1958rem + 4.2667vw, 4.0625rem);
+  line-height: 100%;
+  margin-block-end: 20px;
+}
+
+.title {
+  justify-self: center;
+  font-size: clamp(0.875rem, 0.3875rem + 2.4vw, 1.4375rem);
+  line-height: 100%;
+}
+
+.card-title {
+  font-weight: var(--weightTitle);
+  font-style: bold;
+  font-size: 18px;
+  line-height: 100%;
+  vertical-align: middle;
 }
