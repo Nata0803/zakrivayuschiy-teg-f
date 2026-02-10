@@ -4,7 +4,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -47,10 +46,80 @@
   line-height: 100%;
 }
 
+.card {
+  margin-block-end: 50px;
+}
+
 .card-title {
-  font-weight: var(--weightTitle);
+  padding-block: 4px;
+  padding-inline-start: 10px;
+  font-variation-settings: "wght" var(--weightTitle);
+  max-inline-size: 300px;
   font-style: bold;
   font-size: 18px;
   line-height: 100%;
   vertical-align: middle;
+}
+
+.wrap-img {
+  justify-self: center;
+  align-self: center;
+  position: relative;
+}
+
+.card-img {
+  inline-size: 100%;
+}
+
+.label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 50%;
+  font-family: var(--fontAccent);
+  font-weight: 400;
+  font-style: regular;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px #fff;
+}
+
+@supports (text-stroke: 1px #fff) {
+  span {
+    text-stroke: 1px #fff;
+  }
+}
+
+.card-content {
+  margin-block-end: 25px;
+  display: grid;
+  gap: 20px;
+  padding-block-start: 25px;
+  padding-inline: 25px;
+}
+
+.card-text {
+  font-style: regular;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--textColor);
+}
+
+.button {
+  font-family: var(--fontAccent);
+  font-weight: 400;
+  font-style: regular;
+  font-size: 14px;
+  line-height: 90%;
+  color: var(--textColor);
+  border: 2px solid var(--textColor);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.card__icon-button {
+  padding: 10px 37px;
+  margin-block-end: 25px;
 }
