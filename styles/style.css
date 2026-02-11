@@ -69,6 +69,7 @@
 
 .card-img {
   inline-size: 100%;
+  object-fit: contain;
 }
 
 .label {
@@ -115,11 +116,26 @@
   line-height: 90%;
   color: var(--textColor);
   border: 2px solid var(--textColor);
-  background-color: transparent;
+  background-color: #fff;
   cursor: pointer;
 }
 
 .card__icon-button {
   padding: 10px 37px;
   margin-block-end: 25px;
+}
+
+.button-save {
+  padding: 17px 20px;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  align-items: center;
+}
+
+.icon-floopy {
+  block-size: 28px;
+  inline-size: 28px;
 }
