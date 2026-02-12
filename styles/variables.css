@@ -8,5 +8,5 @@
     repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
   --textColor: #000;
-  
+  --styleRegural: regular;
 }
