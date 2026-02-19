@@ -20,7 +20,7 @@
 .block {
   inline-size: clamp(23.438rem, 16.285rem + 30.516vi, 43.75rem);
   background-color: #fff;
-  border: 2px solid var(--textColor);
+  border: 2px solid var(--accentColor);
   align-self: center;
   justify-self: center;
 }
@@ -49,6 +49,7 @@
 }
 
 .card {
+  position: relative;
   margin-block-end: 50px;
 }
 
@@ -67,16 +68,18 @@
   justify-self: center;
   align-self: center;
   position: relative;
+  inline-size: 100%;
 }
 
 .card-img {
-  border-block-start: 2px solid var(--textColor);
-  border-block-end: 2px solid var(--textColor);
-  inline-size: 100%;
+  border-block-start: 2px solid var(--accentColor);
+  border-block-end: 2px solid var(--accentColor);
   object-fit: fill;
+  inline-size: 100%;
 }
 
 .label {
+  z-index: 1;
   position: absolute;
   top: 25px;
   right: 25px;
@@ -98,7 +101,7 @@
 }
 
 .card-content {
-  margin-block-end: 25px;
+  margin-block-end: 88px;
   display: grid;
   gap: 20px;
   padding-block-start: 25px;
@@ -113,9 +116,10 @@
 }
 
 .button {
-  border: 2px solid var(--textColor);
-  background-color: #fff;
+  border: 2px solid var(--accentColor);
+  background-color: var(--lightColor);
   cursor: pointer;
+  position: relative;
 }
 
 .button__text {
@@ -124,11 +128,11 @@
   font-style: var(--styleRegular);
   font-size: 14px;
   line-height: 90%;
-  color: var(--textColor);
+  color: var(--accentColor);
 }
 
-.card__icon-button {
-  padding: 10px 37px;
+.card__like-button {
+  padding: 10px 35px;
   margin-block-end: 25px;
 }
 
@@ -152,7 +156,7 @@
 }
 
 .dialog::backdrop {
-  color: var(--textColor);
+  background-color: var(--accentColor);
   opacity: 0.75;
 }
 
@@ -166,4 +170,118 @@
   padding: 12.5px 116.5px;
   align-self: center;
   justify-self: center;
+}
+
+.img-bright {
+  filter: brightness(200%);
+}
+
+.img-contrast {
+  filter: contrast(110%);
+}
+
+.img-blur {
+  filter: blur(3.2rem);
+}
+
+.img-grayscale {
+  filter: grayscale(0.4);
+}
+
+.img-saturate {
+  filter: saturate(140%);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accentColor);
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: "";
+  background-color: var(--accentColor);
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+  inset: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--lightColor);
+}
+
+.button .icon-floopy {
+  mix-blend-mode: difference;
+  color: var(--lightColor);
+}
+
+.card__icon-button {
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accentColor);
+  transition: border 0.3s ease;
+}
+
+.wrap-buttons {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  right: 25px;
+  bottom: 25px;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.core:hover {
+  fill: var(--accentColor);
+  transition: fill 0.3 linear 0s;
+}
+
+.core:active {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3 linear 0s;
+}
+
+.contour {
+  transition: fill 0.1s linear 0s;
+}
+
+.main-body {
+  transition: fill 0.3s linear 0s;
+}
+
+.main-body:hover {
+  fill: var(--accentColor);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.main-body:active {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
 }
