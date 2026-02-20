@@ -133,7 +133,6 @@
 
 .card__like-button {
   padding: 10px 35px;
-  margin-block-end: 25px;
 }
 
 .button-save {
@@ -231,13 +230,15 @@
   cursor: pointer;
 }
 
-.card__icon-button:focus {
+ .card__icon-button:focus {
   outline: none;
-}
+  outline-color: transparent;
+} 
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--accentColor);
-  transition: border 0.3s ease;
+  outline: 2px solid var(--accentColor);
+  transition: outline 0.3s ease;
+  padding-block: 0px;
 }
 
 .wrap-buttons {
@@ -258,7 +259,7 @@
   transition: fill 0.3s linear 0.03s;
 }
 
-.core:hover {
+.like-icon:hover .core{
   fill: var(--accentColor);
   transition: fill 0.3 linear 0s;
 }
@@ -276,7 +277,7 @@
   transition: fill 0.3s linear 0s;
 }
 
-.main-body:hover {
+.like-icon:hover .main-body{
   fill: var(--accentColor);
   transition: fill 0.3s linear 0.05s;
 }
