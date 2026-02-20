@@ -27,7 +27,7 @@
 
 .header {
   margin-block: 100px;
-  padding-block: clamp(7.625rem, 7.449rem + 0.751vi, 8.125rem);
+  padding-block: clamp(7.5rem, 7.28rem + 0.939vi, 8.125rem);
   font-family: var(--fontAccent);
   font-weight: 400;
   font-style: var(--styleRegular);
@@ -54,14 +54,16 @@
 }
 
 .card-title {
-  padding-block: 4px;
+  padding-block: 5px;
   padding-inline-start: 10px;
   font-variation-settings: "wght" var(--weightTitle);
-  max-inline-size: 300px;
   font-style: bold;
   font-size: 18px;
   line-height: 100%;
   vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
 }
 
 .wrap-img {
@@ -103,8 +105,8 @@
 .card-content {
   margin-block-end: 88px;
   display: grid;
-  gap: 20px;
-  padding-block-start: 25px;
+  gap: 25px;
+  padding-block-start: 18px;
   padding-inline: 25px;
 }
 
@@ -132,7 +134,7 @@
 }
 
 .card__like-button {
-  padding: 10px 35px;
+  padding: 8px 35px;
 }
 
 .button-save {
@@ -230,10 +232,10 @@
   cursor: pointer;
 }
 
- .card__icon-button:focus {
+.card__icon-button:focus {
   outline: none;
   outline-color: transparent;
-} 
+}
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accentColor);
@@ -248,7 +250,7 @@
   align-content: center;
   justify-content: center;
   right: 25px;
-  bottom: 25px;
+  bottom: 23px;
 }
 
 .sparks {
@@ -259,12 +261,12 @@
   transition: fill 0.3s linear 0.03s;
 }
 
-.like-icon:hover .core{
+.like-icon:hover .core {
   fill: var(--accentColor);
   transition: fill 0.3 linear 0s;
 }
 
-.core:active {
+.like-icon:active .core {
   fill: var(--animation-fill-color);
   transition: fill 0.3 linear 0s;
 }
@@ -277,12 +279,33 @@
   transition: fill 0.3s linear 0s;
 }
 
-.like-icon:hover .main-body{
+.like-icon:hover .main-body {
   fill: var(--accentColor);
   transition: fill 0.3s linear 0.05s;
 }
 
-.main-body:active {
+.like-icon:active .main-body {
   fill: var(--animation-fill-color);
   transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3 linear 0s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+@media (width <= 1440) {
+  .card-title {
+    display: block;
+  }
 }
