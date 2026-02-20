@@ -50,7 +50,11 @@
 
 .card {
   position: relative;
-  margin-block-end: 50px;
+  margin-block-end: 51px;
+}
+
+.card:last-child {
+  margin-block-end: 45px;
 }
 
 .card-title {
@@ -145,6 +149,7 @@
   gap: 8px;
   justify-items: center;
   align-items: center;
+  margin-block-end: 100px;
 }
 
 .icon-floopy {
