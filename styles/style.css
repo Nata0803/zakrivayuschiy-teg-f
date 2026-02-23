@@ -50,7 +50,7 @@
 
 .card {
   position: relative;
-  margin-block-end: 51.5px;
+  margin-block-end: 50.5px;
 }
 
 .card:last-child {
@@ -69,7 +69,11 @@
 .title-card_wrap {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+}
+
+.lh-min {
+  line-height: 50%;
+  margin-block-end: 5px;
 }
 
 .wrap-img {
@@ -108,10 +112,10 @@
 }
 
 .card-content {
-  margin-block-end: 88px;
+  margin-block-end: 25px;
   display: grid;
   gap: 25px;
-  padding-block-start: 18px;
+  padding-block-start: 22px;
   padding-inline: 25px;
 }
 
@@ -275,8 +279,8 @@ svg {
   align-items: center;
   align-content: center;
   justify-content: center;
-  right: 25px;
-  bottom: 23px;
+  margin-block-end: 21px;
+  margin-inline-start: clamp(8.813rem, 1.66rem + 30.516vi, 29.125rem);
 }
 
 .sparks {
@@ -333,11 +337,19 @@ svg {
 @media (min-width: 1440px) {
   .title-card_wrap {
     flex-direction: row;
-    gap: 1px;
+    padding-inline-start: 0;
   }
 
   .header {
     margin-block-end: 95px;
+  }
+
+  .card-title {
+    margin-block-end: 2px;
+  }
+
+  .card-content {
+    padding-block-start: 17px;
   }
 
   .button-save .icon-floppy {
@@ -348,5 +360,9 @@ svg {
   .button-save {
     display: block;
     padding: 12px 20px;
+  }
+
+  .lh-min {
+    line-height: 100%;
   }
 }
