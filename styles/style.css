@@ -364,5 +364,6 @@ svg {
 
   .lh-min {
     line-height: 100%;
+    padding-inline-start: 3.5px;
   }
 }
