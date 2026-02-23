@@ -1,6 +1,6 @@
 :root {
   --font: "Inter", sans-serif;
-  --fontAccent: "Press Start 2P", sans-serif;
+  --fontAccent: "Press Start 2P", fantasy;
   --weightText: 410;
   --weightTitle: 715;
   --gradient:
@@ -9,7 +9,6 @@
     linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
   --accentColor: #000;
   --lightColor: #fff;
-  --styleRegural: regular;
-  --animation-fill-color: #FF0000;
-  --contour-color: #FF0000;
+  --animationFillColor: #FF0000;
+  --contourColor: #FF0000;
 }
