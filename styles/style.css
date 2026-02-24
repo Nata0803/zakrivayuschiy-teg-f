@@ -103,7 +103,7 @@
   text-shadow: 1px var(--lightColor);
 }
 
-@supports (text-stroke: 1px #fff) {
+@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
   .label {
     text-stroke: 1px var(--lightColor);
     -webkit-text-stroke: 1px solid var(--lightColor);
@@ -154,6 +154,7 @@
 }
 
 .button-save {
+  margin-block-end: 100px; 
   padding: 15px 20px;
   justify-self: center;
   align-self: center;
@@ -166,9 +167,10 @@
 .dialog {
   scrollbar-width: none;
   inline-size: clamp(21.313rem, 21.048rem + 1.127vi, 22.063rem);
-  padding: 30px 40px;
+  padding: 28px 30px;
   text-transform: uppercase;
   line-height: 150%;
+  border: 2px solid var(--accentColor);
 }
 
 .dialog::backdrop {
@@ -201,7 +203,7 @@ svg {
 }
 
 .button-dialog {
-  padding: 12.5px 116.5px;
+  padding: 7.5px 114.5px;
   align-self: center;
   justify-self: center;
 }
@@ -209,6 +211,7 @@ svg {
 .button-text_dialog {
   text-align: justify;
   line-height: 150%;
+  max-width: 234px;
 }
 
 .img-bright {
@@ -365,5 +368,12 @@ svg {
   .lh-min {
     line-height: 100%;
     padding-inline-start: 3.5px;
+  }
+
+
+  .button-dialog {
+    padding: 7.5px 130.5px;
+    justify-self: center;
+    align-self: center;
   }
 }
